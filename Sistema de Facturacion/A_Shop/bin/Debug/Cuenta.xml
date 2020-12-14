@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+</DocumentElement>

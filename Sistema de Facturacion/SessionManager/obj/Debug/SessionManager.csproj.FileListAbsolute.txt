@@ -1,0 +1,40 @@
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\CacheManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\CacheManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\CacheManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\DataManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\MySql.Data.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\CacheManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\DataManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\bin\Debug\MySql.Data.xml
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\SessionManager\obj\Debug\SessionManager.pdb

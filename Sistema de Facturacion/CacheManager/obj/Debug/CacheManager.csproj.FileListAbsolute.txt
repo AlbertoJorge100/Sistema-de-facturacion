@@ -1,0 +1,9 @@
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\CacheManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\CacheManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\DataManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\MySql.Data.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\DataManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\bin\Debug\MySql.Data.xml
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\obj\Debug\CacheManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\CacheManager\obj\Debug\CacheManager.pdb

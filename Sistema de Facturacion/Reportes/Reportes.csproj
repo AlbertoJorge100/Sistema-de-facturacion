@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D77EBF7C-2C7C-4636-A028-BEF3E8FDAA40}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reportes</RootNamespace>
+    <AssemblyName>Reportes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAT\dtsFacturaDetalle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFacturaDetalle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFacturas.cs">
+      <DependentUpon>dtsFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFactura_Amd.cs">
+      <DependentUpon>dtsFactura_Amd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFactura_Amd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFactura_Amd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsMovimientoProductos.cs">
+      <DependentUpon>dtsMovimientoProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsMovimientoProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsMovimientoProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsProductos.cs">
+      <DependentUpon>dtsProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsRepAnio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsRepAnio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsRepDia.cs">
+      <DependentUpon>dtsRepDia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsRepDia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsRepDia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsRepMes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsRepMes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsReporteCategorias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReporteCategorias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsReportePeriodo.cs">
+      <DependentUpon>dtsReportePeriodo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsReportePeriodo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsReportePeriodo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VistaReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaReporteFactura.Designer.cs">
+      <DependentUpon>VistaReporteFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VistaReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaReporteProductos.Designer.cs">
+      <DependentUpon>VistaReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REP\ReportePeriodos.cs">
+      <DependentUpon>ReportePeriodos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteMov_Productos.cs">
+      <DependentUpon>ReporteMov_Productos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteAnio.cs">
+      <DependentUpon>ReporteAnio.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteMes.cs">
+      <DependentUpon>ReporteMes.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteDia.cs">
+      <DependentUpon>ReporteDia.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteFacturaDetalle.cs">
+      <DependentUpon>ReporteFacturaDetalle.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteCategorias.cs">
+      <DependentUpon>ReporteCategorias.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteProductos.cs">
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\Reporte_Amd.cs">
+      <DependentUpon>Reporte_Amd.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ReporteFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CacheManager\CacheManager.csproj">
+      <Project>{9e1fb900-939c-49a1-91be-6339420901dd}</Project>
+      <Name>CacheManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataManager\DataManager.csproj">
+      <Project>{f1a6f4d5-794a-41d1-8aff-d73372b19ace}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{7c5cffd8-c499-4089-ac0b-6a5b107badb1}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\VistaReporteFactura.resx">
+      <DependentUpon>VistaReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VistaReporteProductos.resx">
+      <DependentUpon>VistaReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReportePeriodos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePeriodos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteMov_Productos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMov_Productos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteAnio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteAnio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteMes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteDia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteDia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteFacturaDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFacturaDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteCategorias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCategorias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Reporte_Amd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Amd.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DAT\dtsFacturaDetalle.xsc">
+      <DependentUpon>dtsFacturaDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFacturaDetalle.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFacturaDetalle.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsFacturaDetalle.xss">
+      <DependentUpon>dtsFacturaDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFacturas.xsc">
+      <DependentUpon>dtsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsFacturas.xss">
+      <DependentUpon>dtsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFactura_Amd.xsc">
+      <DependentUpon>dtsFactura_Amd.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFactura_Amd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFactura_Amd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsFactura_Amd.xss">
+      <DependentUpon>dtsFactura_Amd.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsMovimientoProductos.xsc">
+      <DependentUpon>dtsMovimientoProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsMovimientoProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsMovimientoProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsMovimientoProductos.xss">
+      <DependentUpon>dtsMovimientoProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsProductos.xsc">
+      <DependentUpon>dtsProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsProductos.xss">
+      <DependentUpon>dtsProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepAnio.xsc">
+      <DependentUpon>dtsRepAnio.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepAnio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsRepAnio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsRepAnio.xss">
+      <DependentUpon>dtsRepAnio.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepDia.xsc">
+      <DependentUpon>dtsRepDia.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepDia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsRepDia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsRepDia.xss">
+      <DependentUpon>dtsRepDia.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepMes.xsc">
+      <DependentUpon>dtsRepMes.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsRepMes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsRepMes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsRepMes.xss">
+      <DependentUpon>dtsRepMes.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsReporteCategorias.xsc">
+      <DependentUpon>dtsReporteCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsReporteCategorias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReporteCategorias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsReporteCategorias.xss">
+      <DependentUpon>dtsReporteCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsReportePeriodo.xsc">
+      <DependentUpon>dtsReportePeriodo.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsReportePeriodo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsReportePeriodo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsReportePeriodo.xss">
+      <DependentUpon>dtsReportePeriodo.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

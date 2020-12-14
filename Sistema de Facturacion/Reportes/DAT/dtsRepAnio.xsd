@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsRepAnio" targetNamespace="http://tempuri.org/dtsRepAnio.xsd" xmlns:mstns="http://tempuri.org/dtsRepAnio.xsd" xmlns="http://tempuri.org/dtsRepAnio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsRepAnio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsRepAnio" msprop:Generator_UserDSName="dtsRepAnio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RepAnio" msprop:Generator_TableClassName="RepAnioDataTable" msprop:Generator_TableVarName="tableRepAnio" msprop:Generator_TablePropName="RepAnio" msprop:Generator_RowDeletingName="RepAnioRowDeleting" msprop:Generator_RowChangingName="RepAnioRowChanging" msprop:Generator_RowEvHandlerName="RepAnioRowChangeEventHandler" msprop:Generator_RowDeletedName="RepAnioRowDeleted" msprop:Generator_UserTableName="RepAnio" msprop:Generator_RowChangedName="RepAnioRowChanged" msprop:Generator_RowEvArgName="RepAnioRowChangeEvent" msprop:Generator_RowClassName="RepAnioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="NumFacturas" msprop:Generator_ColumnVarNameInTable="columnNumFacturas" msprop:Generator_ColumnPropNameInRow="NumFacturas" msprop:Generator_ColumnPropNameInTable="NumFacturasColumn" msprop:Generator_UserColumnName="NumFacturas" type="xs:int" minOccurs="0" />
+              <xs:element name="Costos" msprop:Generator_ColumnVarNameInTable="columnCostos" msprop:Generator_ColumnPropNameInRow="Costos" msprop:Generator_ColumnPropNameInTable="CostosColumn" msprop:Generator_UserColumnName="Costos" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ventas" msprop:Generator_ColumnVarNameInTable="columnVentas" msprop:Generator_ColumnPropNameInRow="Ventas" msprop:Generator_ColumnPropNameInTable="VentasColumn" msprop:Generator_UserColumnName="Ventas" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

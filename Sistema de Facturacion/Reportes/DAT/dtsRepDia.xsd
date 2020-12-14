@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsRepDia" targetNamespace="http://tempuri.org/dtsRepDia.xsd" xmlns:mstns="http://tempuri.org/dtsRepDia.xsd" xmlns="http://tempuri.org/dtsRepDia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsRepDia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsRepDia" msprop:Generator_UserDSName="dtsRepDia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RepDia" msprop:Generator_TableClassName="RepDiaDataTable" msprop:Generator_TableVarName="tableRepDia" msprop:Generator_RowChangedName="RepDiaRowChanged" msprop:Generator_TablePropName="RepDia" msprop:Generator_RowDeletingName="RepDiaRowDeleting" msprop:Generator_RowChangingName="RepDiaRowChanging" msprop:Generator_RowEvHandlerName="RepDiaRowChangeEventHandler" msprop:Generator_RowDeletedName="RepDiaRowDeleted" msprop:Generator_RowClassName="RepDiaRow" msprop:Generator_UserTableName="RepDia" msprop:Generator_RowEvArgName="RepDiaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumFactura" msprop:Generator_ColumnVarNameInTable="columnNumFactura" msprop:Generator_ColumnPropNameInRow="NumFactura" msprop:Generator_ColumnPropNameInTable="NumFacturaColumn" msprop:Generator_UserColumnName="NumFactura" type="xs:string" minOccurs="0" />
+              <xs:element name="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_UserColumnName="Hora" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Empleado" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" type="xs:string" minOccurs="0" />
+              <xs:element name="Costos" msprop:Generator_ColumnVarNameInTable="columnCostos" msprop:Generator_ColumnPropNameInRow="Costos" msprop:Generator_ColumnPropNameInTable="CostosColumn" msprop:Generator_UserColumnName="Costos" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

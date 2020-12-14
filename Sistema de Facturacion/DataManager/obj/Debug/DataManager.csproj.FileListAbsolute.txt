@@ -1,0 +1,35 @@
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\Proyecto Jorge\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\Angye\FG17-I04-001\Proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\Angye\FG17-I04-001\Proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\Angye\FG17-I04-001\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Angye\FG17-I04-001\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\Angye\FG17-I04-001\Proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\Angye\Proyecto_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\proyecto\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\A_Shop\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Alberto\Desktop\ALBERTO\PROYECTO_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\MySql.Data.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\bin\Debug\MySql.Data.xml
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
