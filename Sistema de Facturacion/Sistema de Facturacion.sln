@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General", "General\General.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportes", "Reportes\Reportes.csproj", "{D77EBF7C-2C7C-4636-A028-BEF3E8FDAA40}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SistemaFacturacion", "SistemaFacturacion\SistemaFacturacion.vdproj", "{DA08FD51-214E-4802-8723-395BA72BA906}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,14 +125,14 @@ Global
 		{D77EBF7C-2C7C-4636-A028-BEF3E8FDAA40}.Release|x64.Build.0 = Release|Any CPU
 		{D77EBF7C-2C7C-4636-A028-BEF3E8FDAA40}.Release|x86.ActiveCfg = Release|Any CPU
 		{D77EBF7C-2C7C-4636-A028-BEF3E8FDAA40}.Release|x86.Build.0 = Release|Any CPU
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Debug|Any CPU.ActiveCfg = Debug
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Debug|ARM.ActiveCfg = Debug
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Debug|x64.ActiveCfg = Debug
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Debug|x86.ActiveCfg = Debug
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Release|Any CPU.ActiveCfg = Release
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Release|ARM.ActiveCfg = Release
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Release|x64.ActiveCfg = Release
-		{A70C2DA0-8ACD-4BCE-AFDB-5359015EB7EC}.Release|x86.ActiveCfg = Release
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Debug|Any CPU.ActiveCfg = Debug
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Debug|ARM.ActiveCfg = Debug
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Debug|x64.ActiveCfg = Debug
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Debug|x86.ActiveCfg = Debug
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Release|Any CPU.ActiveCfg = Release
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Release|ARM.ActiveCfg = Release
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Release|x64.ActiveCfg = Release
+		{DA08FD51-214E-4802-8723-395BA72BA906}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

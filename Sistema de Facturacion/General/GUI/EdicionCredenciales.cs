@@ -24,7 +24,7 @@ namespace General.GUI
         private Boolean Confirmacion;
         private Boolean Revisado;
         private Boolean Revisado_;
-        private Usuarios USUARIO
+        private Usuarios USUARIO;
         private Boolean AuxUsuario;
         public Boolean _Revisado { get { return this.Revisado; } }
         public Boolean _Usuario_M { get { return this.Usuario_M; } }
