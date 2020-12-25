@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using DataManager.CLS;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace CacheManager.CLS
 {
@@ -137,9 +140,27 @@ namespace CacheManager.CLS
             return rs;
         }
 
+        public static PictureBox CargarImagen(String id)
+        {
+            DBOperacion cs = new DBOperacion();
+            PictureBox pb = new PictureBox();
+            String cadena = "";
+            Bitmap bm;
+            cadena = @"SELECT Imagen FROM Empleados WHERE IDEmpleado="+id;
+            try
+            {                
+                bm =new Bitmap((MemoryStream)cs.ConsultarImagen(cadena));
+                pb.Image = bm;
+            }
+            catch (Exception)
+            {
+                pb = null;
+            }
+            return pb;
+        }
 
         public static DataTable RolPermisos(String IDR)
-        {
+        {            
             DBOperacion cs = new DBOperacion();
             DataTable rs = new DataTable();
             String cadena = "";

@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataManager.CLS;
 using General.CLS;
+using System.IO;
+using System.Drawing.Imaging;
+
 namespace General.GUI
 {
     public partial class EdicionEmpleado : Form
     {
+        private Boolean ValidarFotografia = false;
         public enum Documento { _dui, _nit, _nup };
         public enum Opcion { INSERTAR, ACTUALIZAR};
         private String IDEmpleado;
@@ -25,6 +29,11 @@ namespace General.GUI
         {            
             try
             {
+                //Conversion de imagen a array de bytes
+                MemoryStream ms = new MemoryStream();
+                pbImagen.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] aByte = ms.ToArray();
+                
                 Empleados emp = new Empleados()
                 { 
                     IDEmpleado=this.IDEmpleado,
@@ -41,11 +50,12 @@ namespace General.GUI
                     NIT = txbNIT.Text,
                     NUP = txbNUP.Text,
                     NumeroTelefono = txbTelefono.Text,
-                    Edad = txbEdad.Text
+                    Edad = txbEdad.Text,
+                    Foto=aByte
                 };  
 
                 if (this.opcion == Opcion.INSERTAR)
-                {
+                {                                        
                     if (emp.Guardar())
                     {
                         MessageBox.Show("Empleado ingresado exitosamente ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -55,7 +65,7 @@ namespace General.GUI
                     else
                     {
                         MessageBox.Show("El empleado no pudo ser ingresado, porfavor contacte con el desarrollador ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    }                    
                 }
                 else
                 {
@@ -104,7 +114,11 @@ namespace General.GUI
                                         if (!validarCaracter(txbSalario.Text))
                                         {
                                             //podremos hacer la insercion ala DB
-                                            this.Procesar();                                            
+                                            if (this.ValidarFotografia)
+                                            {
+                                                this.Procesar();
+                                            }
+                                            else{MessageBox.Show("Debe ingresar una fotografia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);}                                            
                                         }
                                         else { MessageBox.Show("Formato incorrecto en Salario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                                     }
@@ -193,35 +207,29 @@ namespace General.GUI
             {
                 this.IDEmpleado = IDE;
             }
-        }
-        
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+        }                     
 
         private void AddUsuario_Load(object sender, EventArgs e)
         {
             fechaIngreso.Format = DateTimePickerFormat.Custom;
             fechaIngreso.CustomFormat = "yyyy/MM/dd";
             this.MaximizeBox = false;
-            this.MinimizeBox = false;           
+            this.MinimizeBox = false;
+            try
+            {
+                if (this.opcion == Opcion.ACTUALIZAR)
+                {
+                    //Pendiente de configurar
+                    PictureBox aux= CacheManager.CLS.Cache.CargarImagen(this.IDEmpleado);
+                    pbImagen.Image = aux.Image;
+                    
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Excepcion al mostrar la imagen: " + ex.ToString());
+            }
         }
         
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -229,19 +237,36 @@ namespace General.GUI
             this.Agregar();   
         }
         
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbDUI_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+    
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        
+        private void cargarImagen()
+        {
+            try
+            {
+                OpenFileDialog ofdSeleccionar = new OpenFileDialog();
+                ofdSeleccionar.Filter = "Imagenes|*.jpg; *.png; *.jpeg";
+                ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                ofdSeleccionar.Title = "Seleccionar la fotografia";
+                if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
+                {
+                    pbImagen.Image = Image.FromFile(ofdSeleccionar.FileName);
+                    this.ValidarFotografia = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+            cargarImagen();
+        }
+
+     
     }
 }

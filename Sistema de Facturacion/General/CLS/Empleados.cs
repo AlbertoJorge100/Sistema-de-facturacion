@@ -24,6 +24,13 @@ namespace General.CLS
         private String _NUP;
         private String _NumeroTelefono;
         private String _Edad;
+        private byte[] _Foto;
+
+        public byte[] Foto
+        {
+            get { return _Foto; }
+            set { _Foto = value; }
+        }
 
         public String Edad
         {
@@ -124,23 +131,24 @@ namespace General.CLS
             try
             {
                 cadena = "INSERT INTO Empleados (Nombres, Apellidos, Correo, EstudiosAcademicos, Salario, FechaIngreso, " +
-                    @"Direccion,NumeroCelular, Cargo, DUI, NIT, NUP, NumeroTelefono, Edad) VALUES(";
-                    cadena += @"'" + Nombres + "', ";
-                    cadena += @"'" + Apellidos + "', ";
-                    cadena += @"'" + Correo + "', ";
-                    cadena += @"'" + EstudiosAcademicos + "', ";
-                    cadena += @"'" + Salario + "', ";
-                    cadena += @"'" + FechaIngreso + "', ";
-                    cadena += @"'" + Direccion + "', ";
-                    cadena += @"'" + NumeroCelular + "', ";
-                    cadena += @"'" + Cargo + "', ";
-                    cadena += @"'" + DUI + "', ";
-                    cadena += @"'" + NIT + "', ";
-                    cadena += @"'" + NUP + "', ";
-                    cadena += @"'" + NumeroTelefono + "', ";
-                    cadena += @"'" + Edad + "') ";                                
+                    @"Direccion,NumeroCelular, Cargo, DUI, NIT, NUP, NumeroTelefono, Edad, Imagen) VALUES(";
+                cadena += @"'" + Nombres + "', ";
+                cadena += @"'" + Apellidos + "', ";
+                cadena += @"'" + Correo + "', ";
+                cadena += @"'" + EstudiosAcademicos + "', ";
+                cadena += @"'" + Salario + "', ";
+                cadena += @"'" + FechaIngreso + "', ";
+                cadena += @"'" + Direccion + "', ";
+                cadena += @"'" + NumeroCelular + "', ";
+                cadena += @"'" + Cargo + "', ";
+                cadena += @"'" + DUI + "', ";
+                cadena += @"'" + NIT + "', ";
+                cadena += @"'" + NUP + "', ";
+                cadena += @"'" + NumeroTelefono + "', ";
+                cadena += @"'" + Edad + "', ";
+                cadena += @"@imagen)";
                 DBOperacion operacion = new DBOperacion();
-                if (operacion.Insertar(cadena) > 0)
+                if (operacion.Insertar(cadena,true, Foto) > 0)
                 {                    
                     confirmacion = true;
                 }                
@@ -173,10 +181,11 @@ namespace General.CLS
                 cadena += @"NIT = '" + NIT + "', ";
                 cadena += @"NUP = '" + NUP + "', ";
                 cadena += @"NumeroTelefono = '" + NumeroTelefono + "', ";
-                cadena += @"Edad = " + Edad + " ";
+                cadena += @"Edad = " + Edad + ", ";
+                cadena += @"Imagen = @imagen";
                 cadena += @" WHERE IDEmpleado=" + IDEmpleado;
                 DBOperacion operacion = new DBOperacion();
-                if (operacion.Actualizar(cadena) > 0)
+                if (operacion.Actualizar(cadena,true,Foto) > 0)
                 {                    
                     confirmacion = true;
                 }                

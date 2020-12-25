@@ -216,11 +216,7 @@ namespace General.GUI
             //this.WindowState = FormWindowState.Maximized;
             //dtgEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
         
-
-
-
 
         private void AddUsuario_Load(object sender, EventArgs e)
         {           

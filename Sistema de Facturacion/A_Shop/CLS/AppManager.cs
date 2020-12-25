@@ -23,6 +23,10 @@ namespace General.CLS
             DatosServidor();                        
         }
   
+        /// <summary>
+        /// Accedemos a la lectura de los datos de acceso al servidor
+        /// previamente guardados en un archivo xml
+        /// </summary>
         private void DatosServidor()
         {
             try
@@ -86,7 +90,7 @@ namespace General.CLS
                                 "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         //ruta  C:\Users\Alberto\Desktop                        
-                    }
+                    }//De lo contrario ya fue hecho el respaldo correspondiente a este dia
                 }
             }
             catch (Exception e)
