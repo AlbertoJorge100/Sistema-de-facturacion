@@ -13,8 +13,18 @@ using System.Windows.Forms;
 
 namespace CacheManager.CLS
 {
+    /// <summary>
+    /// Clase para Gestionar una peticion al servidor, 
+    /// exclusivamente para "SELECT"
+    /// </summary>
     public static class Cache
     {
+        /// <summary>
+        /// Consultar empleados 
+        /// </summary>
+        /// <param name="i">
+        /// </param>
+        /// <returns>DataTable</returns>
         public static DataTable consultaEmpleados(int i = 0) {
             DBOperacion cs = new DBOperacion();
             DataTable rs = new DataTable();
@@ -40,7 +50,11 @@ namespace CacheManager.CLS
             return rs;
         }
 
-
+        /// <summary>
+        /// Consultar datos de un usuario para el login 
+        /// </summary>
+        /// <param name="pUsuario">Usuario</param>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaLogin(String pUsuario)
         {
             DBOperacion cs = new DBOperacion();
@@ -61,6 +75,11 @@ namespace CacheManager.CLS
             return rs;
         }
 
+
+        /// <summary>
+        /// Consultar las notificaciones
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaNotificaciones()
         {
             DBOperacion cs = new DBOperacion();
@@ -80,7 +99,12 @@ namespace CacheManager.CLS
             return rs;
         }
 
-
+        /// <summary>
+        /// Consulta a procedimiento almacenado para cerrar una factura especifica
+        /// </summary>
+        /// <param name="idFactura">Id de la factura</param>
+        /// <param name="pCliente">Cliente </param>
+        /// <returns>DataTable</returns>
         public static DataTable CerrarFactura(String idFactura, String pCliente)
         {//Procedimiento almacenado
             DBOperacion cs = new DBOperacion();
@@ -101,6 +125,11 @@ namespace CacheManager.CLS
             return rs;
         }
 
+        /// <summary>
+        /// Consulta a procedimiento almacenado para poder cargar los productos en 
+        /// la ventana de facturar productos
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable CargarProductosFactura()
         {//Procedimiento almacenado
             DBOperacion cs = new DBOperacion();
@@ -121,6 +150,12 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consulta a procedimiento almacenado para verificar si se puede crear un backup de la base de datos
+        /// en la fecha actual
+        /// </summary>
+        /// <param name="ST">Parametro para poder especificar que es procedimiento almacenado</param>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaRespaldos(Boolean ST = false)
         {
             DBOperacion cs = new DBOperacion();
@@ -140,6 +175,12 @@ namespace CacheManager.CLS
             return rs;
         }
 
+
+        /// <summary>
+        /// Consulta a la base de datos para traer una fotografia del empleado solicitado
+        /// </summary>
+        /// <param name="id">Id del empleado</param>
+        /// <returns>PictureBox</returns>
         public static PictureBox CargarImagen(String id)
         {
             DBOperacion cs = new DBOperacion();
@@ -159,6 +200,13 @@ namespace CacheManager.CLS
             return pb;
         }
 
+
+        /// <summary>
+        /// Consultar a la base de datos para traer los permisos 
+        /// segun el rol
+        /// </summary>
+        /// <param name="IDR">Id del rol</param>
+        /// <returns>DataTable</returns>
         public static DataTable RolPermisos(String IDR)
         {            
             DBOperacion cs = new DBOperacion();
@@ -181,6 +229,10 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consulta los productos en la base de datos 
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable consultaProductos()
         {//Administrador
             DBOperacion cs = new DBOperacion();
@@ -207,9 +259,12 @@ namespace CacheManager.CLS
             return rs;
         }
 
-
+        /// <summary>
+        /// Consulta los productos 
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaProductosFactura()
-        {//Usuario facturador
+        {
             DBOperacion cs = new DBOperacion();
             DataTable rs = new DataTable();
             String cadena = @"SELECT  p.IDProducto, p.NombreProducto 'Producto', p.Marca, 
@@ -228,9 +283,9 @@ namespace CacheManager.CLS
             return rs;
         }
 
-
+        /*
         public static DataTable consultaProductos(String producto, int op = 0)
-        {//Usuario facturador
+        {
             DBOperacion cs = new DBOperacion();
             DataTable rs = new DataTable();
             String cadena = "";
@@ -257,9 +312,15 @@ namespace CacheManager.CLS
                 rs = new DataTable();
             }
             return rs;
-        }
+        }*/
 
-
+        
+        /// <summary>
+        /// Consultar los proveedores
+        /// </summary>
+        /// <param name="clave">Nombre del proveedor</param>
+        /// <param name="i">Opcion</param>
+        /// <returns>DataTable</returns>
         public static DataTable consultaProveedores(String clave = "", int i = 0)
         {
             DBOperacion cs = new DBOperacion();
@@ -294,7 +355,12 @@ namespace CacheManager.CLS
             return rs;
         }
 
-
+        /// <summary>
+        /// Consulta de categorias
+        /// </summary>
+        /// <param name="clave">Categorias</param>
+        /// <param name="i">Opcion</param>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaCategorias(String clave = "", int i = 0)
         {
             DBOperacion cs = new DBOperacion();
@@ -341,6 +407,10 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consulta de usuarios
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable consultaUsuarios()
         {
             DataTable Resultado = new DataTable();
@@ -361,6 +431,11 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Modificacion de usuario
+        /// </summary>
+        /// <param name="clave">usuario</param>
+        /// <returns>DataTable</returns>
         public static DataTable modificacionUsuario(String clave)
         {
             DataTable Resultado = new DataTable();
@@ -382,6 +457,10 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consultar el usuario segun el empleado
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable consultaUsuariosEmpleados()
         {
             DataTable Resultado = new DataTable();
@@ -404,6 +483,10 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consulta de los roles
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaRoles()
         {
             DataTable Resultado = new DataTable();
@@ -423,7 +506,11 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Consulta de los permisos segun el rol 
+        /// </summary>
+        /// <param name="pIDRol">Id rol</param>
+        /// <returns>DataTable</returns>
         public static DataTable AsignacionPermisos(String pIDRol)
         {
             DataTable Resultado = new DataTable();
@@ -449,6 +536,11 @@ namespace CacheManager.CLS
         }
 
 
+        /// <summary>
+        /// Consulta a procedimiennto almacenado para crear una factura
+        /// </summary>
+        /// <param name="pIDEmpleado">Id del empleado</param>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultarFactura(String pIDEmpleado)
         {
             DataTable Resultado = new DataTable();
@@ -468,10 +560,12 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
+        //----------------------------------------------------------       Reportes
+
         /// <summary>
-        /// ----------------------------------------------------------- REPORTES ------------------------------------------------------------
+        /// Consulta para Reporte de productos
         /// </summary>
-        /// <returns></returns>
+        /// <returns>DataTable</returns>
         public static DataTable ReporteProductos()
         {
             DataTable Resultado = new DataTable();
@@ -494,7 +588,10 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Consulta reporte de las facturas creadas en un dia especifico
+        /// </summary>
+        /// <returns>DataTable</returns>
         public static DataTable ConsultaFacturaVentas()
         {
             DataTable Resultado = new DataTable();
@@ -517,6 +614,12 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
+
+        /// <summary>
+        /// Consulta de repoerte de una factura en especifico
+        /// </summary>
+        /// <param name="pIDFactura">Id de la factura</param>
+        /// <returns>DataTable</returns>
         public static DataTable ReporteFacturaDetalle(String pIDFactura)
         {
             DataTable Resultado = new DataTable();
@@ -540,7 +643,11 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Consulta de reporte para ver una factura en especifico
+        /// </summary>
+        /// <param name="pNumFactura">Id factura</param>
+        /// <returns>DataTable</returns>
         public static DataTable ReporteNumFactura(String pNumFactura)
         {
             DataTable Resultado = new DataTable();
@@ -564,6 +671,12 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
+
+        /// <summary>
+        /// Consulta reporte de un año en especifico
+        /// </summary>
+        /// <param name="pAnio">Id año</param>
+        /// <returns>DataTable</returns>
         public static DataTable ReporteF_Anio(String pAnio)
         {
             DataTable Resultado = new DataTable();
@@ -603,7 +716,12 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Consulta de reportes movimiento de productos vendidos en un periodo de tiempo
+        /// </summary>
+        /// <param name="fechaInicio">Fecha de inicio</param>
+        /// <param name="fechaFin">Fecha de llegada</param>
+        /// <returns>DataTable</returns>
         public static DataTable Reporte_Movimiento_Productos(String fechaInicio, String fechaFin)
         {
             DataTable Resultado = new DataTable();
@@ -633,7 +751,12 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Consulta de reporte de ventas en un periodo de tiempo
+        /// </summary>
+        /// <param name="fechaInicio">Fecha de inicio</param>
+        /// <param name="fechaFin">Fecha de llegada</param>
+        /// <returns>DataTable</returns>
         public static DataTable Reporte_Periodos(String fechaInicio, String fechaFin)
         {
             DataTable Resultado = new DataTable();
@@ -686,6 +809,12 @@ namespace CacheManager.CLS
         }
 
 
+
+        /// <summary>
+        /// Consulta de reporte en un dia especifico
+        /// </summary>
+        /// <param name="pFecha">Fecha</param>
+        /// <returns>DataTable</returns>
         public static DataTable ReporteF_Dia(String pFecha)
         {
             DataTable Resultado = new DataTable();
@@ -713,9 +842,7 @@ namespace CacheManager.CLS
 
 
         /*
-         
-        
-        
+                         
         -- PROCEDIMIENTO ALMACENADO NOTIFICACIONES --------- MODIFICADO USANDOOOOOOOOOO
         DROP PROCEDURE IF EXISTS  ConsultaNotificaciones;
         DELIMITER $$

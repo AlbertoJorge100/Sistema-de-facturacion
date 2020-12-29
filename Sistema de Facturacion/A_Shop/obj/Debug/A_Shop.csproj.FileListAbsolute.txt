@@ -36,8 +36,6 @@ C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_D
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.CuentaUsuario.resources
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.Login.resources
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.Principal.resources
-C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.prueba.resources
-C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.PruebaConector.resources
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.GUI.Splash.resources
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\General.Properties.Resources.resources
 C:\Users\ALBERTO\Desktop\ALBERTO\CUARTO AÑO\IMPLANTACION DE SISTEMAS\PROYECTO_DSII\Sistema de Facturacion\A_Shop\obj\Debug\A_Shop.csproj.GenerateResource.Cache

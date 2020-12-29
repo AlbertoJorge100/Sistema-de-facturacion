@@ -23,8 +23,6 @@ namespace General.GUI
         private Opcion opcion;
         public Boolean Confirmacion;       
         public Boolean _Confirmacion { get { return this.Confirmacion; } }
-
-
         private void Procesar()
         {            
             try
@@ -32,8 +30,7 @@ namespace General.GUI
                 //Conversion de imagen a array de bytes
                 MemoryStream ms = new MemoryStream();
                 pbImagen.Image.Save(ms, ImageFormat.Jpeg);
-                byte[] aByte = ms.ToArray();
-                
+                byte[] aByte = ms.ToArray();                
                 Empleados emp = new Empleados()
                 { 
                     IDEmpleado=this.IDEmpleado,

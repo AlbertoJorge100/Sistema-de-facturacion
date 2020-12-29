@@ -14,22 +14,37 @@ using General.GUI;
 using Reportes.GUI;
 namespace General.GUI
 {
+    /// <summary>
+    /// Clase principal para acceder a las distintas funciones del sistema 
+    /// Permitiendo asi las opciones de acuerdo al rol del usuario 
+    /// </summary>
     public partial class Principal : Form
     {
+        /// <summary>
+        /// Temporizador para llevar el cronometro del momento en que se hara una consulta
+        /// al procedimiento almacenado
+        /// </summary>
         private Boolean Temporizador;
+        //Singleton para variables de sesion
         private Sesion _Sesion = Sesion.Instancia;
         //private int childFormNumber = 0;
         private Boolean SesionLogin;
         public Boolean _SesionLogin { get { return this.SesionLogin; } }
-        
-        //Prestado de login ------------------------------- Despues de testear borrar
+               
+ 
+        /// <summary>
+        /// Inicializar Singleton
+        /// </summary>
         private void variablesSesion()
-        {//metodo para aplicar variables de sesion
+        {
+            //metodo para aplicar variables de sesion
             if (_Sesion == null)
             {
                 _Sesion = Sesion.Instancia;
             }
-            /*_Sesion.Informacion.IDUsuario = "64";
+            /*
+             * Datos quemados para pruebas del servidor 
+             * _Sesion.Informacion.IDUsuario = "64";
             _Sesion.Informacion.Usuario = "Admin";
             _Sesion.Informacion.IDRol = "1";
             _Sesion.Informacion.Rol = "Administrador";
@@ -37,10 +52,17 @@ namespace General.GUI
             _Sesion.Informacion.IDEmpleado = "27";
             _Sesion.Informacion.Empleado = "Jorge Alberto Perez Nolasco";*/
         }
+
+        /// <summary>
+        /// Metodo de cargar las notificaciones del stock en general de todos los productos.
+        /// Este metodo esta restringido solo a los roles que tengan el permiso previamente
+        /// definidos por el administrador del sistema.
+        /// </summary>
         private void CargarNotificaciones()
         {
             try
             {
+                //Llenado de las variables
                 DataTable notificaciones = Cache.ConsultaNotificaciones();
                 if (notificaciones.Rows.Count == 1)
                 {
@@ -50,10 +72,14 @@ namespace General.GUI
                     lblProximosVencer.ForeColor = Color.Green;
                     lblVencidos.ForeColor = Color.Green;
                     String proxagotar, agotados, proxvencer, vencidos;
+
+                    //Llenado de singleton con los datos obtenidos del servidor
                     _Sesion.Informacion.ProximosAgotar = proxagotar = linea[0].ToString();
                     _Sesion.Informacion.Agotados = agotados = linea[1].ToString();
                     _Sesion.Informacion.ProximosVencer = proxvencer = linea[2].ToString();
-                    _Sesion.Informacion.Vencidos = vencidos = linea[3].ToString();                    
+                    _Sesion.Informacion.Vencidos = vencidos = linea[3].ToString();       
+                    
+                    //Si los productos tienen "x" cantidad tendran "x" color
                     if (!proxagotar.Equals("0"))
                     {
                         lblProximosAgotar.ForeColor = Color.Red;                     
@@ -70,6 +96,8 @@ namespace General.GUI
                     {
                         lblVencidos.ForeColor = Color.Red;                        
                     }
+
+                    //Mostrando los datos en el panel principal
                     lblProximosAgotar.Text = proxagotar;
                     lblAgotados.Text = agotados;
                     lblProximosVencer.Text = proxvencer;
@@ -88,31 +116,33 @@ namespace General.GUI
             InitializeComponent();      
         }
 
-        private void pruebaDeConectorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PruebaConector f = new PruebaConector();
-            f.ShowDialog();            
-        }
-
         private void añadirUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EdicionUsuario f = new EdicionUsuario();
             f.ShowDialog();
         }
 
+        /// <summary>
+        /// Cargar los datos de la sesion en el status bar  principal
+        /// </summary>
         private void datosSesion() {
             lblUsuario.Text = _Sesion.Informacion.Usuario.ToUpper();
             lblRol.Text = _Sesion.Informacion.Rol.ToUpper();
             lblServidor.Text = _Sesion.Informacion.Servidor.ToUpper();
         }
-
+        /// <summary>
+        /// Asignacion de los permisos de acuerdo al rol que tiene el usuario 
+        /// , y podra visualizar las diferentes opciones en el menu principal
+        /// </summary>
         private void AsignarAcciones()
         {
             try
             {
+                //Obtencion de las opciones en el menu
                 DataTable lista = _Sesion.Informacion.Permisos();
                 foreach (DataRow fila in lista.Rows)
                 {
+                    //Seran visibles las opciones a travez del foreach
                     switch (int.Parse(fila["IDOpcion"].ToString()))
                     {
                         case 1:
@@ -156,7 +186,8 @@ namespace General.GUI
                             break;
                         }
                         case 9:
-                        {//NOTIIFICACIONES
+                        {
+                            //NOTIIFICACIONES
                             lblPA.Visible = true;
                             lblA.Visible = true;
                             lblPV.Visible = true;
@@ -203,9 +234,14 @@ namespace General.GUI
             }            
         }
 
-
+        /// <summary>
+        /// Visualizacion de la opcion usuarios
+        /// IDOpcion 4: Usuarios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void vistaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {//USUARIOS            
+        {
             try
             {//IDOpcion 4 Usuarios
                 if (_Sesion.Informacion.VerificarPermisos(4))
@@ -225,11 +261,16 @@ namespace General.GUI
             }
         }
 
-
+        /// <summary>
+        /// Visualizacion de la opcion Empleados
+        /// IDOpcion 1: Empleados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void vistaEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {//EMPLEADOS
+        {
             try
-            {//IDOPCION = 1
+            {
                 if (_Sesion.Informacion.VerificarPermisos(1))
                 {
                     GestionEmpleados f = new General.GUI.GestionEmpleados();
@@ -248,10 +289,16 @@ namespace General.GUI
             }
         }
 
+        /// <summary>
+        /// Visualizacion de la opcion Productos
+        /// IDOpcion 5: Productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {//Productos            
+        {
             try
-            {//IDOpcion 5 Productos
+            {
                 if (_Sesion.Informacion.VerificarPermisos(5))
                 {
                     GestionProductos_ f = new GestionProductos_();
@@ -270,11 +317,16 @@ namespace General.GUI
             }
         }
 
-
+        /// <summary>
+        /// Visualizacion de opcion Categorias
+        /// IDOpcion 6: Categorias
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {//CATEGORIAS
+        {
             try
-            {//IDOpcion 6 categorias
+            {
                 if (_Sesion.Informacion.VerificarPermisos(6))
                 {
                     GestionCategorias f = new GestionCategorias();
@@ -293,10 +345,16 @@ namespace General.GUI
         }
 
 
+        /// <summary>
+        /// Visualizacion de opcion Proveedores
+        /// IDOpcion 7: Proveedores
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {//PROVEEDORES
+        {
             try
-            {//IDOpcion 7 Proveedores
+            {
                 if (_Sesion.Informacion.VerificarPermisos(7))
                 {
                     GestionProveedores f = new GestionProveedores();
@@ -314,6 +372,12 @@ namespace General.GUI
             }
         }
 
+        /// <summary>
+        /// Visualizacion de opcion Modificacion de credenciales de usuario
+        /// IDOpcion 8: EdicionCredenciales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cambiarCredencialesToolStripMenuItem_Click(object sender, EventArgs e)
         {///-----------------------------------------------------------------------------------
             try
@@ -334,16 +398,13 @@ namespace General.GUI
                 Console.WriteLine("Excepcion en principal: " + e2.ToString());
             }
         }
-
-        private void btnSesion_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Desea cerra sesion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.SesionLogin = true;
-                this.Close();
-            }            
-        }
-
+       
+        /// <summary>
+        /// Visualizacion opcion Cerrar sesion
+        /// , esta opcion aparece en todas los roles, en todas las sesiones.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea cerra sesion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -357,6 +418,13 @@ namespace General.GUI
             }
         }
 
+
+        /// <summary>
+        /// Visualizacion de opcion Respaldo de base de datos
+        /// IDOpcion 10: Edicion respaldo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bACKUPDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -378,15 +446,29 @@ namespace General.GUI
             }
         }
 
+
+        /// <summary>
+        /// Evento del temporizador que se estara ejecutando en el intervalo de tiempo predefinido
+        /// y esta opcion sera visible solo para el administrador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //this.CargarNotificaciones();------------------------------Modificar
+            this.CargarNotificaciones();
         }
 
+        /// <summary>
+        /// Visualizacion de opciion Gestion de permisos
+        /// IDOpcion 3: Gestion permisos,
+        /// Solo para el administrador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rOLESToolStripMenuItem_Click(object sender, EventArgs e)
         {            
             try
-            {//IDOpcion 10 Proveedores
+            {
                 if (_Sesion.Informacion.VerificarPermisos(3))
                 {
                     GestionPermisos f = new GestionPermisos();
@@ -404,6 +486,13 @@ namespace General.GUI
             }
         }
 
+
+        /// <summary>
+        /// Visualizacion de opcion Gestion de factura
+        /// IDOpcion 11: Gestion de factura
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pclFacturacion_Click(object sender, EventArgs e)
         {
             try
@@ -427,10 +516,17 @@ namespace General.GUI
             
         }
 
+
+        /// <summary>
+        /// Visualizacion de opcion Gestion de roles
+        /// IDOpcion 2: Gestion de roles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pclRol_Click(object sender, EventArgs e)
         {
             try
-            {//IDOpcion 10 Proveedores
+            {
                 if (_Sesion.Informacion.VerificarPermisos(2))
                 {
                     GestionRoles f = new GestionRoles();
@@ -448,10 +544,17 @@ namespace General.GUI
             }           
         }
 
-            private void vENTASToolStripMenuItem_Click(object sender, EventArgs e)
+
+        /// <summary>
+        /// Visualizacion de opcion Ventas
+        /// IDOpcion 13: Ventas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void vENTASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {//IDOpcion 10 Proveedores
+            {
                 if (_Sesion.Informacion.VerificarPermisos(13))
                 {
                     Ventas f = new Ventas();
@@ -470,20 +573,23 @@ namespace General.GUI
             }            
         }
 
-          private void rEPORTESToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void Principal_Load(object sender, EventArgs e)
         {
             variablesSesion();
-            this.AsignarAcciones();// -------ZZZ Modificaaaaaaaaaaaarrrr----------------                    
-            //this.datosSesion();//----------------- Modificaaaaaaaaaaaaaarrrrrrrrrrrrrrr
-            //this.SesionLogin = false;
-            //this.Temporizador = false;
+            this.AsignarAcciones();
+            this.lblUsuario.Text = _Sesion.Informacion.Usuario;
+            this.lblServidor.Text = _Sesion.Informacion.Servidor;
+            this.lblRol.Text = _Sesion.Informacion.Rol;            
         }
 
+
+        /// <summary>
+        /// Visualizacion de opcion Vista Reporte Productos
+        /// IDOpcion 12: Vista de reporte de los productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -506,6 +612,13 @@ namespace General.GUI
             }
         }
 
+
+        /// <summary>
+        /// Visualizacion de opcion Vista reporte productos opcion Categorias
+        /// IDOpcion 12: Vista reporte de productos opcion categorias
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void reporteDeCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -526,6 +639,46 @@ namespace General.GUI
             {
                 Console.WriteLine("Excepcion en principal: " + e2.ToString());
             }            
+        }
+
+        private void lblPA_Click(object sender, EventArgs e)
+        {
+            GestionProductos_ f = new GestionProductos_();
+            f.cmbOpcion.SelectedIndex = 0;
+            f.FiltroPersonalizado();
+            f.Dock = DockStyle.Fill;
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void lblA_Click(object sender, EventArgs e)
+        {
+            GestionProductos_ f = new GestionProductos_();
+            f.cmbOpcion.SelectedIndex = 1;
+            f.FiltroPersonalizado();
+            f.Dock = DockStyle.Fill;
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void lblPV_Click(object sender, EventArgs e)
+        {
+            GestionProductos_ f = new GestionProductos_();
+            f.cmbOpcion.SelectedIndex = 2;
+            f.FiltroPersonalizado();
+            f.Dock = DockStyle.Fill;
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void lblV_Click(object sender, EventArgs e)
+        {
+            GestionProductos_ f = new GestionProductos_();
+            f.cmbOpcion.SelectedIndex = 3;
+            f.FiltroPersonalizado();
+            f.Dock = DockStyle.Fill;
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

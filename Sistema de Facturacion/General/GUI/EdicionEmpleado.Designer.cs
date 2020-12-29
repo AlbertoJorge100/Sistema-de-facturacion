@@ -162,7 +162,7 @@
             // 
             // txbEstudios
             // 
-            this.txbEstudios.Location = new System.Drawing.Point(763, 355);
+            this.txbEstudios.Location = new System.Drawing.Point(786, 355);
             this.txbEstudios.Margin = new System.Windows.Forms.Padding(4);
             this.txbEstudios.Multiline = true;
             this.txbEstudios.Name = "txbEstudios";
@@ -217,7 +217,7 @@
             this.txbDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txbDireccion.Multiline = true;
             this.txbDireccion.Name = "txbDireccion";
-            this.txbDireccion.Size = new System.Drawing.Size(299, 58);
+            this.txbDireccion.Size = new System.Drawing.Size(299, 70);
             this.txbDireccion.TabIndex = 14;
             // 
             // label9
@@ -235,7 +235,7 @@
             // fechaIngreso
             // 
             this.fechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaIngreso.Location = new System.Drawing.Point(763, 301);
+            this.fechaIngreso.Location = new System.Drawing.Point(786, 301);
             this.fechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.fechaIngreso.Name = "fechaIngreso";
             this.fechaIngreso.Size = new System.Drawing.Size(299, 22);
@@ -309,7 +309,7 @@
             // 
             // txbCargo
             // 
-            this.txbCargo.Location = new System.Drawing.Point(763, 409);
+            this.txbCargo.Location = new System.Drawing.Point(786, 409);
             this.txbCargo.Margin = new System.Windows.Forms.Padding(4);
             this.txbCargo.Multiline = true;
             this.txbCargo.Name = "txbCargo";
@@ -330,7 +330,7 @@
             // 
             // txbSalario
             // 
-            this.txbSalario.Location = new System.Drawing.Point(763, 463);
+            this.txbSalario.Location = new System.Drawing.Point(786, 463);
             this.txbSalario.Margin = new System.Windows.Forms.Padding(4);
             this.txbSalario.Multiline = true;
             this.txbSalario.Name = "txbSalario";
@@ -389,7 +389,7 @@
             // 
             // txbCorreo
             // 
-            this.txbCorreo.Location = new System.Drawing.Point(763, 517);
+            this.txbCorreo.Location = new System.Drawing.Point(786, 517);
             this.txbCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txbCorreo.Multiline = true;
             this.txbCorreo.Name = "txbCorreo";
@@ -409,9 +409,9 @@
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(763, 103);
+            this.pbImagen.Location = new System.Drawing.Point(853, 103);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(225, 159);
+            this.pbImagen.Size = new System.Drawing.Size(144, 159);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 36;
             this.pbImagen.TabStop = false;

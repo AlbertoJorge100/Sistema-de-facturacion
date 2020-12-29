@@ -70,18 +70,6 @@
     <Compile Include="GUI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\PruebaConector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PruebaConector.Designer.cs">
-      <DependentUpon>PruebaConector.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +86,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PruebaConector.resx">
-      <DependentUpon>PruebaConector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

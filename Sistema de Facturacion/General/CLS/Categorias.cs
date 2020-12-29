@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace General.CLS
 {
+    /// <summary>
+    /// Clase entidad: Categorias
+    /// </summary>
     public class Categorias
     {
         private String _IDCategoria;
@@ -32,6 +35,10 @@ namespace General.CLS
             set { _IDCategoria = value; }
         }
 
+        /// <summary>
+        /// Metodo para insertar una categoria al servidor
+        /// </summary>
+        /// <returns>Boolean</returns>
         public Boolean Guardar()
         {
             Boolean confirmacion = false;
@@ -55,7 +62,10 @@ namespace General.CLS
             return confirmacion;
         }
 
-
+        /// <summary>
+        /// Metodo actualizar Categorias
+        /// </summary>
+        /// <returns>Boolean</returns>
         public Boolean Actualizar()
         {
             Boolean confirmacion = false;
@@ -79,7 +89,10 @@ namespace General.CLS
             return confirmacion;
         }
 
-
+        /// <summary>
+        /// Eleminar una categoria
+        /// </summary>
+        /// <returns>Boolean</returns>
         public Boolean Eliminar()
         {
             Boolean confirmacion = false;

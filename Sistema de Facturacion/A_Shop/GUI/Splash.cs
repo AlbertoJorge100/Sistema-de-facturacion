@@ -34,6 +34,14 @@ namespace General.GUI
             Cronometro.Start();
         }
 
+        /// <summary>
+        /// Evento: presionar teclas
+        /// Si se presiona la combinacion ctrl + n
+        /// Se procedera a acceder a la cuenta de usuario 
+        /// que permite poder modificar los datos de acceso al servidor 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Splash_KeyUp(object sender, KeyEventArgs e)
         {
             if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.N))

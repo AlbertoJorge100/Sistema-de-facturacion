@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using General.CLS;
 namespace General.GUI
 {
-    
+    /// <summary>
+    /// Clase para obtener los datos del usuario de conexion al servidor 
+    /// </summary>
     public partial class CuentaUsuario : Form
     {
         public Boolean Respuesta = false;
+        private Boolean VerPassword = false;
         public CuentaUsuario()
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace General.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Validacion de campos
             if(!txbUsuario.Text.Equals("") && !txbPassword.Text.Equals("")
                 && !txbServidor.Text.Equals("") && !txbBaseDatos.Text.Equals(""))
             {
@@ -44,9 +48,19 @@ namespace General.GUI
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        //Permite visualizar la contraseña escrita en el campo de contraseña
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            if (!VerPassword)
+            {
+                this.txbPassword.UseSystemPasswordChar = false;
+                VerPassword = true;
+            }
+            else
+            {
+                this.txbPassword.UseSystemPasswordChar = true;
+                VerPassword = false;
+            }
         }
     }
 }

@@ -12,6 +12,9 @@ using SessionManager.CLS;
 using General.CLS;
 namespace General.GUI
 {
+    /// <summary>
+    /// Clase que se encarga para Modificar un usuario 
+    /// </summary>
     public partial class EdicionCredenciales : Form
     {
         private String Usuario;
@@ -19,8 +22,17 @@ namespace General.GUI
         private String IDUsuario;
         private String IDEmpleado;
         private String IDRol;
+
+        /// <summary>
+        /// Variable para validar si es modificacion de contraseña
+        /// </summary>
         private Boolean Contrasena_M;
+
+        /// <summary>
+        /// Variable para validar si es modificacion de usuario 
+        /// </summary>
         private Boolean Usuario_M;
+
         private Boolean Confirmacion;
         private Boolean Revisado;
         private Boolean Revisado_;
@@ -32,7 +44,9 @@ namespace General.GUI
         public Boolean _Contrasena_M { get { return this.Contrasena_M; } }
         public Boolean _AuxUsuario { get { return this.AuxUsuario; } }
 
-
+        /// <summary>
+        /// Metodo para ejecutar una operacion de modificacion de usuario o contraseña
+        /// </summary>
         private void Procesar()
         {
             String cadena = "";                           

@@ -11,15 +11,20 @@ using General.CLS;
 using General.GUI;
 using SessionManager.CLS;
 
+/// <summary>
+/// En esta clase se lleva el control total del sistema es a travez de esta clase que permitimos poder acceder a 
+/// las ventanas principales del sistema
+/// </summary>
 namespace General.CLS
 {
     class AppManager : ApplicationContext
-    {
-        private Sesion _Sesion = Sesion.Instancia;
+    {   
+        //Variable para validar si existe peticion de modificacion de credenciales de acceso al servidor
         private bool resultadoServidor = true;
+        //Valida si se sale por completo del login 
         private Boolean AccesoSalir;
         public AppManager()
-        {
+        {            
             DatosServidor();                        
         }
   
@@ -31,25 +36,42 @@ namespace General.CLS
         {
             try
             {
+                //Establecemos conexion al servidor de la base de datos
                 DBConexion db = new DBConexion(true);
                 db.Configurar();
                 db.LeerLista();
                 /*String usuario = db.LeerLista().Rows[0]["Usuario"].ToString();
                 String usuario = db.LeerLista().Rows[0]["Password"].ToString();
                 String usuario2 = db.LeerLista().Rows[0]["Servidor"].ToString();*/
-                if (db.LeerLista().Rows.Count == 0 || !resultadoServidor)
+
+                //Intento de lectura del archivo xml
+                DataTable Datos = db.LeerLista();
+                if (Datos.Rows.Count == 0 || !resultadoServidor)
                 {
+                    //El archivo xml no existe o ya existe pero requiere una modificacion
                     CuentaUsuario cuenta = new CuentaUsuario();
-                    cuenta.ShowDialog();
-                    if (cuenta.Respuesta)
+                    //Validacion si existe y requiere cambio de credenciales
+                    if (!resultadoServidor)
                     {
+                        //Si se desea modificar los datos de acceso al servidor mostrara los ya existentes
+                        int i = Datos.Rows.Count;
+                        cuenta.txbUsuario.Text = Datos.Rows[i - 1]["Usuario"].ToString();
+                        cuenta.txbPassword.Text = Datos.Rows[i - 1]["Password"].ToString();
+                        cuenta.txbServidor.Text = Datos.Rows[i - 1]["Servidor"].ToString();
+                        cuenta.txbBaseDatos.Text = Datos.Rows[i - 1]["BaseDatos"].ToString();
+                    }                    
+                    cuenta.ShowDialog();
+
+                    //Se guardaran los cambios en el archivo xml o se creara si aun no existe 
+                    if (cuenta.Respuesta)
+                    {//Se modificaron los accesos al sistema
                         DataRow fila = db.get_DATOS().NewRow();
                         fila["Usuario"] = cuenta.txbUsuario.Text;
                         fila["Password"] = cuenta.txbPassword.Text;
                         fila["Servidor"] = cuenta.txbServidor.Text;
                         fila["BaseDatos"] = cuenta.txbBaseDatos.Text;
                         db.get_DATOS().Rows.Add(fila);
-                        db.GuardarLista();
+                        db.GuardarLista();//creando el archivo xml o guardando los cambios
                         this.Proceso();
                     }
                 }
@@ -63,11 +85,15 @@ namespace General.CLS
                 Console.WriteLine(e.ToString());
             }
         }
-
+        /// <summary>
+        /// Metodo para poder validar si en la fecha actual corresponde hacer un respaldo ala base de datos de acuerdo a los
+        /// párametros seteados por el administrador del sistema
+        /// </summary>
         private void AccesoRespaldo()
-        {
+        {            
             try
             {
+                //Consulta al servidor de la fecha actual si toca respaldo o no existe
                 DataTable resultado = Cache.ConsultaRespaldos();
                 if (resultado.Rows.Count > 0)
                 {
@@ -83,6 +109,8 @@ namespace General.CLS
                             * control sobre sus procesos*/
                         respaldo.EjecutarComando(usuario, contrasena, ruta.Replace(@" ", @"\"), baseDatos, "localhost");
                         DBOperacion operacion = new DBOperacion();
+
+                        //Insertando la informacion en la base de datos del respaldo recien creado
                         String cadena = @"INSERT INTO Respaldos (Fecha, Estado, IDRespaldoOpcion) VALUES(NOW(), TRUE, 1)";
                         if (operacion.Insertar(cadena) <= 0)
                         {
@@ -99,6 +127,9 @@ namespace General.CLS
             }
         }
 
+        /// <summary>
+        /// Acceso al sistema principal 
+        /// </summary>
         private void Proceso()
         {
             //GUI.Principal f = new GUI.Principal();
@@ -107,7 +138,11 @@ namespace General.CLS
             Boolean opcion = false;
             this.AccesoRespaldo();
             if (Splash())
-            {//validacion de respaldos                                
+            {
+                /*
+                 * Cada vez que se cierre la sesion regresara a la ventana de login 
+                 * hasta que el usuario presione el boton de Cancelar 
+                 * **/
                 do
                 {
                     if (Login())
@@ -119,8 +154,11 @@ namespace General.CLS
                 } while (opcion && !AccesoSalir);
             }
         }
-
-
+        
+        /// <summary>
+        /// Splash de inicio del sistema
+        /// </summary>
+        /// <returns>true</returns>
         private Boolean Splash()
         {
             Boolean Resultado = true;
@@ -135,7 +173,10 @@ namespace General.CLS
             return Resultado;
         }
 
-
+        /// <summary>
+        /// Ingreso al sistema a travez del login
+        /// </summary>
+        /// <returns></returns>
         private Boolean Login()
         {
             GUI.Login f = new GUI.Login();

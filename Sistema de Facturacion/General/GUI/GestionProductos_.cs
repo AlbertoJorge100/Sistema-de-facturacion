@@ -83,7 +83,7 @@ namespace General.GUI
             return !txbCantidad.Text.ToString().Equals("");
         }                 
 
-        private void FiltroPersonalizado(Boolean pOpcion = false)
+        public void FiltroPersonalizado(Boolean pOpcion = false)
         {
             try
             {

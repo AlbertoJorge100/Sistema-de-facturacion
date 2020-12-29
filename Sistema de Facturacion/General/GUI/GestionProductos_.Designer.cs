@@ -488,7 +488,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txbCantidad;
-        private System.Windows.Forms.ComboBox cmbOpcion;
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
@@ -506,5 +505,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Alias;
+        public System.Windows.Forms.ComboBox cmbOpcion;
     }
 }

@@ -6,4 +6,40 @@
     <Servidor>localhost</Servidor>
     <BaseDatos>sistemafacturaciondb</BaseDatos>
   </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
+  <Cuenta>
+    <Usuario>root</Usuario>
+    <Password>jorge_perez100</Password>
+    <Servidor>localhost</Servidor>
+    <BaseDatos>sistemafacturaciondb</BaseDatos>
+  </Cuenta>
 </DocumentElement>

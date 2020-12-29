@@ -90,7 +90,7 @@
             // 
             // Cronometro
             // 
-            this.Cronometro.Interval = 5000;
+            this.Cronometro.Interval = 2000;
             this.Cronometro.Tick += new System.EventHandler(this.Cronometro_Tick);
             // 
             // label4

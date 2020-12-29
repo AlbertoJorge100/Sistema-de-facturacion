@@ -14,18 +14,29 @@ using System.IO;
 using System.Web;
 
 namespace DataManager.CLS
-{   //Clase dedicada a gestionar consultas y sentencias sql
+{   /// <summary>
+    /// Clase utilizada para poder ejecutar sentencias sql 
+    /// : Insert, Update, Delete
+    /// </summary>
     public class DBOperacion : DBConexion
     {
+        /// <summary>
+        /// Variable para validar si se tiene una imagen en caso que se desee interactuar con una imagen
+        /// </summary>
         private bool imagen = false;
+
+        /// <summary>
+        /// Variable para poder almacenar una imagen que viene en un array de bytes
+        /// </summary>
         private byte[] imagenByte;
-        //descargar conector mysql c.net 6.9.10
-        private void ScriptExecute(String pSentencia)
-        {
+        
 
-        }
-
-
+        /// <summary>
+        /// Metodo que ejecuta una sentencia SQL 
+        /// (Insert, Update, Delete)
+        /// </summary>
+        /// <param name="pSentencia">Query a ejecutar</param>
+        /// <returns>Int32</returns>
         private Int32 EjecutarSentencia(String pSentencia)
         {
             Int32 FilasAfectadas = 0;
@@ -40,6 +51,7 @@ namespace DataManager.CLS
                     //aqui llamamos el metodo protegido de la clase padre
                     Comando.Connection = conexion;
                     Comando.CommandText = pSentencia;
+                    //En un caso se desee operar una imagen en array de bytes
                     if (this.imagen)
                     {
                         //Insertamos la imagen convertida a array de bytes
@@ -50,9 +62,7 @@ namespace DataManager.CLS
             }
             catch (Exception )
             {
-                //              MessageBox.Show("");
                 FilasAfectadas = -1;
-
             }
             finally
             {
@@ -68,6 +78,12 @@ namespace DataManager.CLS
             return FilasAfectadas;
         }
 
+        /// <summary>
+        /// Metodo para consultar una imagen del servidor
+        /// , que viene en un array de bytes y posterior convertirla en imagen
+        /// </summary>
+        /// <param name="query">Query a ejecutar</param>
+        /// <returns>MemoryStream</returns>
         public MemoryStream ConsultarImagen(String query)
         {
             PictureBox imagen = new PictureBox();
@@ -105,6 +121,13 @@ namespace DataManager.CLS
             return ms;
         }
         
+        /// <summary>
+        /// Metodo generico para consultar al servidor
+        /// </summary>
+        /// <param name="pConsulta">Query a ejecutar</param>
+        /// <param name="pOP"></param>
+        /// <param name="arr"></param>
+        /// <returns>DataTable</returns>
         public DataTable Consultar(String pConsulta, Boolean pOP=false, String [] arr=null)//String nomParam="",String param="")
         {
             String[] sd = new String[30];
@@ -155,6 +178,14 @@ namespace DataManager.CLS
             }
             return Resultado;
         }
+
+        /// <summary>
+        /// Metodo Insertar, previo a ejecutar sentencia
+        /// </summary>
+        /// <param name="pSentencia">Query a ejecutar</param>
+        /// <param name="estado">Si se desea operar una imagen</param>
+        /// <param name="imgByte">Imagen convertida en Array de bytes</param>
+        /// <returns>Int32</returns>
         public Int32 Insertar(String pSentencia, bool estado=false, byte[] imgByte=null)
         {
             this.imagen = estado;
@@ -164,6 +195,14 @@ namespace DataManager.CLS
             }
             return EjecutarSentencia(pSentencia);
         }
+
+        /// <summary>
+        /// Metodo Actualizar, previo a ejecutar sentencia
+        /// </summary>
+        /// <param name="pSentencia">Query a ejecutar</param>
+        /// <param name="estado">Si se desea operar imagen</param>
+        /// <param name="imgByte">Imagen convertida en array de bytes</param>
+        /// <returns>Int32</returns>
         public Int32 Actualizar(String pSentencia, bool estado=false, byte[] imgByte=null)
         {
             this.imagen = estado;
